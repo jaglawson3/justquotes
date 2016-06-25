@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MY APP</title>
+  <title>Just Quotes</title>
   <link rel='stylesheet' href='/styles/style.css' />
 </head>
 <body>
-  May your quotes follow you always.
+  <h1>Just Quotes</h1>
 
   <ul class="quotes">
   <% for(var i=0; i<quotes.length; i++) {%>
     <li class="quote">
 
       <span>"<%= quotes[i].quote %>"</span>
-      <span>- <%= quotes[i].name %></span>
+      <span> - <%= quotes[i].name %></span>
 
     </li>
   <% } %>
