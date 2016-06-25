@@ -6,6 +6,7 @@ const MongoClient = require('mongodb').MongoClient
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('view engine', 'ejs')
 
+
 var db
 
 MongoClient.connect('mongodb://admin:password@ds023644.mlab.com:23644/just-quotes', function(err, database) {
@@ -15,6 +16,8 @@ MongoClient.connect('mongodb://admin:password@ds023644.mlab.com:23644/just-quote
     console.log('listening on 3001')
   })
 })
+
+app.use("/styles",express.static(__dirname + "/styles"));
 
 console.log("server is running")
 

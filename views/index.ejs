@@ -3,23 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>MY APP</title>
+  <link rel='stylesheet' href='/styles/style.css' />
 </head>
 <body>
-  May Node and Express be with you.
+  May your quotes follow you always.
 
   <ul class="quotes">
   <% for(var i=0; i<quotes.length; i++) {%>
     <li class="quote">
+
+      <span>"<%= quotes[i].quote %>"</span>
       <span><%= quotes[i].name %></span>
-      <span><%= quotes[i].quote %></span>
+
     </li>
   <% } %>
   </ul>
 
-  <form action="/quotes" method="POST">
+  <form class= "inputForm" action="/quotes" method="POST">
     <input type="text" placeholder="name" name="name">
     <input type="text" placeholder="quote" name="quote">
-    <button type="submit">Submit</button>
+    <button type="submit">Add Quote</button>
   </form>
 </body>
 </html>
