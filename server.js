@@ -21,13 +21,18 @@ app.use("/styles",express.static(__dirname + "/styles"));
 
 console.log("server is running")
 
-app.get('/', function(req, res) {
+app.get('/', function(req, res, next) {
   var cursor = db.collection('quotes').find().toArray(function(err, results) {
   console.log(results)
   // renders index.ejs
     res.render('index.ejs', {quotes: results})
+  })
 })
 
+app.get('/:id', function(req, res, next) {
+  var cursor = db.collection('quotes').find().toArray(function(err, results) {
+    res.render(req.params.id + '.ejs', {quotes: results})
+  })
 })
 
 app.post('/quotes', function(req, res) {
