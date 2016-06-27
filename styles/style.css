@@ -179,9 +179,33 @@ p {
     font-size: 6vw;
   }
 
-  .homeButton, .nextButton, .previousButton, #submitButton {
+  .singleQuoteViews {
+    font-size: 4vw;
+    color: white;
+    text-shadow: 1vw 0vw 1vw black;
+    border: 1vw solid #363636;
+    margin: 2vh;
+    background-color: #9b77e4;
+  }
+
+  .homeButton, .nextButton, .previousButton {
     width: 12vw;
     height: 8vh;
     font-size: 2.5vw;
+  }
+
+  #submitButton {
+    width: 19.5vw;
+    font-size: 1.5vw;
+    padding: 0;
+    margin:0;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+  }
+
+  .inputForm {
+    transform: scale(3);
+    margin-top: 10vh;
+    margin-bottom: 7vh;
   }
 }
