@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Just Quotes</title>
-  <link rel='stylesheet' href='/styles/style.css' />
+  <% include ../views/head %>
 </head>
 <body>
-  <div class="titleContainer">
-    <img class="title" src='/styles/title.svg'/>
+  <header>
+    <% include ../views/header %>
+  </header>
+  <div class="buttonContainer">
+    <button class="nextButton"><a href="/2">Next Quote</a></button>
+    <button class="homeButton"><a href="/index">Home</a></button>
   </div>
-  <span>"<%= quotes[0].quote %>"</span>
-  <span> - <%= quotes[0].name %></span>
+  <div class="quoteContainer">
+    <span class="singleQuote">"<%= quotes[0].quote %>"</span>
+    <br />
+    <span class="author"> - <%= quotes[0].name %></span>
+  </div>
+
+
+
+
 
 </body>
 </html>

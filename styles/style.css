@@ -1,6 +1,31 @@
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Droid Serif', serif;
+  font-style: italic;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+}
+
+
+label.label {
+  font-size: 1.3vw;
+  padding-left: 5.5vw;
+  color: white;
+}
+
+#submitButton {
+  background-color: #d9be99;
+  font-size: 1vw;
+  box-shadow: 0vw 1vw 1vw #363636;
+  margin-left: 6vw;
+}
+
 .inputForm {
-  background-color: orange;
-  margin-left: 40vw;
+  background-color: hsla(207, 62%, 11%, .43);
   width: 20vw;
   padding:.3vw;
   box-shadow: 0vw 1vw 1vw hsla(357, 42%, 14%, .5);
@@ -8,24 +33,21 @@
   border-left: .4vw solid #d9be65;
   border-bottom: .4vw solid #1b2327;
   border-top: .4vw solid #9c9e73;
+  border-radius: .3vw;
 }
 
-.inputForm > input {
+.quoteInput {
   width: 9vw;
   height: 2vh;
-}
-
-.inputForm > button {
-  width: 20vw;
+  font-size: 1vw;
 }
 
 body {
   font-size: 4vw;
   padding: 1vw;
   background-image: url(bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #4c0000;
+  background-size: 300vh;
+  color:white;
 }
 
 li{
@@ -35,8 +57,6 @@ li{
 h1{
   text-align: center;
 }
-
-
 
 .titleContainer {
   display: flex;
@@ -58,4 +78,95 @@ h1{
   font-size: 2vw;
   text-align: center;
   text-shadow: 0vw .2vw .4vw #363636;
+}
+
+.quotes > li {
+  margin: 3vh;
+}
+
+.quoteContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.singleQuote {
+  margin-top: 10vh;
+  font-size: 3vw;
+  text-align: center;
+  text-shadow: 0vw .2vw .4vw #363636;
+}
+
+.author {
+  font-size: 1.3vw;
+  text-align: center;
+  text-shadow: 0vw .2vw .4vw black;
+  color: #faebd7;
+}
+
+.buttonContainer {
+  margin: 2vw;
+  display: flex;
+  justify-content:space-around;
+
+}
+
+.previousButton, .homeButton {
+  background-color:#d9be65;
+  color: white;
+  font-size: 1.2vw;
+  box-shadow: 0vw 1vw 1vw #363636;
+}
+
+p {
+  text-align: center;
+}
+
+.previousButton, .nextButton, .homeButton, #submitButton {
+    transition: .4s ease-out;
+}
+
+.previousButton > a {
+  text-decoration: none;
+  color: #363636;
+}
+
+.homeButton > a {
+  text-decoration: none;
+  color: #363636;
+}
+
+.nextButton {
+  background-color:#d9be65;
+  color: white;
+  font-size: 1.2vw;
+  transition: .6s ease-out;
+  margin-left: 60vw;
+  box-shadow: 0vw 1vw 1vw #363636;
+}
+
+.nextButton:hover, .previousButton:hover, .homeButton:hover, #submitButton:hover {
+  background-color: #666666;
+  text-decoration: overline;
+}
+
+.nextButton > a {
+  text-decoration: none;
+  color: #363636;
+}
+
+.nextButton > a:hover, .previousButton > a:hover, .homeButton > a:hover, #submitButton:hover  {
+  color: white;
+  transform: scale(1.05);
+}
+
+.singleQuoteViews {
+  text-decoration: none;
+  font-size: 1.5vw;
+  color: slategray  ;
+}
+
+.allQuotes {
+  color: white;
+  font-size: 1.5vw;
 }
