@@ -32,6 +32,10 @@ app.get('/:id', function(req, res) {
   })
 })
 
+app.get('/admin', function(req, res {
+  res.render('admin.ejs')
+}))
+
 app.post('/quotes', function(req, res) {
   db.collection('quotes').save(req.body, function (err, results) {
     if (err) return console.log(err)
