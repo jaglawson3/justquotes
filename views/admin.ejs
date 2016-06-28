@@ -1,0 +1,13 @@
+<head>
+  <% include ../views/head %>
+</head>
+<header>
+  <% include ../views/header %>
+<div class="formContainer">
+  <form class= "inputForm" action="/quotes" method="POST">
+    <label class="label" for="quote">Add a new quote</label><br />
+    <input class="quoteInput" type="text" placeholder="quote" name="quote">
+    <input class="quoteInput" type="text" placeholder="author" name="name">
+    <button id="submitButton" type="submit">Add New Quote</button>
+  </form>
+</div>
