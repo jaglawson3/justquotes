@@ -1,0 +1,20 @@
+Overview
+XYZ Corp has need for a small system to display quotes on a screen. The screen can potentially be any size, from the ~4" of a smartphone to a large 42" HD display. Assume that anyone who has access to the web application has full control over the system. User should be able to see all quotes currently stored in the database, add new ones, and view a single quote nicely formatted on the screen.
+
+For each quote, store the quote text, the person it is attributed to, and the source work, if any.
+
+Challenge - Part I
+
+Build a simple Rails app that defaults to the single-quote view. The endpoints to view all and add quotes to the system should be "hidden" -- that is, user should have to go to a specific URL to get access to the "admin" functionality. It is safe to assume that no users will intentionally supply bad data in the interest of breaking the system.
+
+Use SQLite as the database store and submit with your solution. The app should run with a simple invocation of rails s.
+
+Document any assumptions you make and any shortcomings your solution may have. Feel free to add on to the explicit requirements in any way that demonstrates your particular strengths (designing a nice UI if you're a strong designer, etc.).
+
+Challenge - Part II
+
+Create a document in your favorite documentation format (Markdown, Asciidoc, reStructuredText, etc.) that (a) describes how the Model-View-Controller architecture of a Rails application leads to the separation of responsibilities evident in this project and (b) argues either in support of Rails for this particular project or in favor of another language and/or framework.
+
+Submission
+
+Do NOT post your solution on Github or another public site. Zip up your solution and documentation and email it to bparks AT picturebooth DOT co.
