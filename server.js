@@ -20,9 +20,9 @@ app.use("/views",express.static(__dirname + "/views"));
 console.log("server is running")
 
 app.get('/', function(req, res) {
-  var cursor = db.collection('quotes').find().toArray(function(err, results) {
-  console.log(results)
-  res.render('index.ejs', {quotes: results})
+  var cursor = db.collection('quotes').find().toArray(function(err, data) {
+  console.log(data)
+  res.render('index.ejs', {quotes: data})
   })
 })
 
