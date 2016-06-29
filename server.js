@@ -72,6 +72,6 @@ app.post('/quotes', function(req, res) {
     db.collection('quotes').save(req.body, function (err, results) {
         if (err) return console.log(err)
         console.log('saved to database')
-        res.redirect('/')
+        res.redirect('/quotes')
         })
     })

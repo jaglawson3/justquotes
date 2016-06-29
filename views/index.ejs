@@ -4,27 +4,10 @@
 <body>
 <header>
   <% include ../views/header %>
-  <span class="allQuotes">"<%= quotes[0].quote %>"</span>
-  <p>
-    <button><a class="singleQuoteViews" href="/1">single quote views</a></button>
-  </p>
-</header>
-
-  <ul class="quotes">
-
-
-  <% for(var i=0; i<quotes.length; i++) {%>
-    <li class="quote">
-
-      <span class="allQuotes">"<%= quotes[i].quote %>"</span>
-      <br />
-      <span class="author"> - <%= quotes[i].name %></span>
-
-    </li>
-  <% } %>
-  </ul>
-
-
-
+  <div class="quoteContainer">
+    <span class="singleQuote">"<%= quotes[7].quote %>"</span>
+    <br />
+  </div>
+  <h3 class="author"> - <%= quotes[7].name %></h3>
 </body>
 </html>
