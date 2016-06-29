@@ -68,7 +68,8 @@ body {
   -28px 56px 1px #e4e3e2,
   -29px 58px 1px #e9e8e7,
   -30px 60px 1px #eeeeed,
-  -31px 62px 1px #f6f6f6;}
+  -31px 62px 1px #f6f6f6,
+  -32px 64px 1px #fff;}
   50% {text-shadow:
     1px -1px 0 #767676,
     1px 2px 1px #737272,
@@ -101,7 +102,8 @@ body {
     28px 56px 1px #e4e3e2,
     29px 58px 1px #e9e8e7,
     30px 60px 1px #eeeeed,
-    31px 62px 1px #f6f6f6;}
+    31px 62px 1px #f6f6f6,
+    -32px 64px 1px #fff;}
     to {text-shadow:
     -1px -1px 0 #767676,
     -1px 2px 1px #737272,
@@ -134,7 +136,8 @@ body {
     -28px 56px 1px #e4e3e2,
     -29px 58px 1px #e9e8e7,
     -30px 60px 1px #eeeeed,
-    -31px 62px 1px #f6f6f6;}
+    -31px 62px 1px #f6f6f6,
+    -32px 64px 1px #fff;}
   }
 }
 
