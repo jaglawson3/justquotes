@@ -1,21 +1,23 @@
-<head>
-  <% include ../views/head %>
-</head>
-<header>
-  <% include ../views/header %>
-</header>
-<body>
-  <ul class="quotes">
+  <head>
+    <% include ../views/head %>
+  </head>
+  <body>
+  <header>
+    <% include ../views/header %>
+  </header>
+  <main>
+    <ul class="quotes">
 
-  <% for(var i=0; i<quotes.length; i++) {%>
-    <li class="quote">
+    <% for(var i=0; i<quotes.length; i++) {%>
+      <li class="quote">
 
-      <span class="allQuotes">"<%= quotes[i].quote %>"</span>
-      <br />
-      <span class="allAuthors"> - <%= quotes[i].name %></span>
+        <span class="allQuotes">"<%= quotes[i].quote %>"</span>
+        <br />
+        <span class="allAuthors"> - <%= quotes[i].name %></span>
 
-    </li>
-  <% } %>
-  </ul>
-</body>
+      </li>
+    <% } %>
+    </ul>
+  </main>
+  </body>
 </html>

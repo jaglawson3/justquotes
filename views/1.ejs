@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <% include ../views/head %>
 </head>
@@ -7,14 +5,12 @@
   <header>
     <% include ../views/header %>
   </header>
-  <div class="quoteContainer">
-    <span class="singleQuote">"<%= quotes[0].quote %>"</span>
-    <br />
-  </div>
-  <h3 class="author"> - <%= quotes[0].name %></h3>
-  <footer>
-     <% include ../views/footer %>
-  </footer>
-
+  <main>
+    <div class="quoteContainer">
+      <span class="singleQuote">"<%= quotes[0].quote %>"</span>
+      <br />
+    </div>
+    <h3 class="author"> - <%= quotes[0].name %></h3>
+  </main>
 </body>
 </html>

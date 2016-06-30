@@ -5,18 +5,12 @@
   <header>
     <% include ../views/header %>
   </header>
-  <div class="quoteContainer">
-    <span class="singleQuote">"<%= quotes[1].quote %>"</span>
-    <br />
-  </div>
-  <h3 class="author"> - <%= quotes[1].name %></h3>
-
-
-
-
-<footer>
-   <% include ../views/footer %>
-</footer>
-
+  <main>
+    <div class="quoteContainer">
+      <span class="singleQuote">"<%= quotes[1].quote %>"</span>
+      <br />
+    </div>
+    <h3 class="author"> - <%= quotes[1].name %></h3>
+  </main>
 </body>
 </html>
