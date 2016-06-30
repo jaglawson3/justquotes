@@ -53,7 +53,7 @@ MongoClient.connect(buildConnectionString(), function(err, database) {
 
 app.get('/', function(req, res) {
     var cursor = db.collection('quotes').find().toArray(function(err, data) {
-        res.render('index.ejs',{quotes: data})
+        res.render('index',{quotes: data})
     })
 })
 
@@ -65,7 +65,7 @@ app.get('/:id', function(req, res) {
 })
 
 app.get('/admin', function(req, res) {
-    res.render('admin.ejs')
+    res.render('admin')
 })
 
 app.post('/quotes', function(req, res) {
