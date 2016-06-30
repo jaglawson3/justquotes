@@ -279,4 +279,10 @@ p.subTitle , .quotes {
       width: 48vw;
       font-size: 4vw;
     }
+
+    .author {
+      font-size: 8vw;
+      color: gray;
+    }
+
 }
