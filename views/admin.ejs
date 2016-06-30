@@ -3,8 +3,9 @@
 </head>
 <header>
   <% include ../views/header %>
+
 <div class="formContainer">
-  <form action="/quotes" method="POST">
+  <form action="/quotes" method="POST" class="quoteForm">
     <img src="../styles/quill.svg" class="icon" />
     <label class="label" for="quote">New Quote:</label><br />
     <input class="quoteInput" type="text" placeholder="quote" name="quote">

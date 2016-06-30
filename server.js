@@ -22,23 +22,6 @@ function buildConnectionString() {
   ].join("")
 }
 
-// var connectToDatabase = new Promise(function(resolve, reject){
-//     MongoClient.connect(buildConnectionString(), function(err, databaseConnection) {
-//         if (error){
-//             reject(error)
-//         } else {
-//             resolve(databaseConnection)
-//         }
-//     })
-// })
-//
-// var listenForRequests = new Promise(function(resolve, reject){
-//     app.listen(PORT || 3001, () => {
-//         const PORT = process.env.PORT || 3001
-//         resolve(console.log(['listening on', PORT, "!"].join(" ")))
-//     })
-// })
-
 app.use("/styles",express.static(__dirname + "/styles"));
 app.use("/views",express.static(__dirname + "/views"));
 
@@ -49,7 +32,6 @@ MongoClient.connect(buildConnectionString(), function(err, database) {
         console.log('listening on ' + process.env.PORT)
     })
 })
-
 
 app.get('/', function(req, res) {
     var cursor = db.collection('quotes').find().toArray(function(err, data) {
@@ -82,7 +64,7 @@ app.get('/admin', function(req, res) {
 app.post('/quotes', function(req, res) {
     db.collection('quotes').save(req.body, function (err, data) {
         if (err) return console.log(err)
-        console.log('saved to database')
-        res.redirect('/quotes')
-        })
+            console.log('saved to database')
+            res.redirect('/quotes')
     })
+})
