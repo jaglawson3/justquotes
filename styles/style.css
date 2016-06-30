@@ -219,3 +219,64 @@ body {
 #submitButton:hover {
   transform: scale(1.2);
 }
+
+p.subTitle , .quotes {
+  width: 50vw;
+  margin-left: 20vw;
+
+}
+
+.quotes {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.allQuotes {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.quotes > li {
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 2vw;
+  width: 50vw;
+  text-align: center;
+}
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    body {
+      background-size: cover;
+    }
+
+    .singleQuote {
+      font-size: 13vw;
+    }
+
+    .title {
+      transform: scale(3);
+    }
+
+    .formContainer {
+      width: 60vw;
+      margin-top: 35vh;
+      transform: scale(2);
+    }
+
+    .quoteInput {
+      width: 58vw;
+    }
+
+    #submitButton {
+      width: 48vw;
+      font-size: 4vw;
+    }
+}

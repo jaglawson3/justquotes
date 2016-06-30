@@ -3,10 +3,6 @@
 </head>
 <header>
   <% include ../views/header %>
-  <p class="subTitle">* all your quotes are presented here, per the challenge append a number to the url to see the quotes individually. Add a quote and it will be displayed here.</p>
-  <p>
-    <button><a class="singleQuoteViews" href="/1">single quote views</a></button>
-  </p>
 </header>
 <body>
   <ul class="quotes">
@@ -16,7 +12,7 @@
 
       <span class="allQuotes">"<%= quotes[i].quote %>"</span>
       <br />
-      <span class="author"> - <%= quotes[i].name %></span>
+      <span class="allAuthors"> - <%= quotes[i].name %></span>
 
     </li>
   <% } %>
