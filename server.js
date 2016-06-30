@@ -23,11 +23,11 @@ function buildConnectionString() {
 }
 
 // var connectToDatabase = new Promise(function(resolve, reject){
-//     MongoClient.connect(buildConnectionString(), function(err, dbc) {
+//     MongoClient.connect(buildConnectionString(), function(err, databaseConnection) {
 //         if (error){
 //             reject(error)
 //         } else {
-//             resolve(dbc)
+//             resolve(databaseConnection)
 //         }
 //     })
 // })
@@ -35,7 +35,7 @@ function buildConnectionString() {
 // var listenForRequests = new Promise(function(resolve, reject){
 //     app.listen(PORT || 3001, () => {
 //         const PORT = process.env.PORT || 3001
-//         resolve(console.log(['listening on', PORT, "Yo!"].join(" ")))
+//         resolve(console.log(['listening on', PORT, "!"].join(" ")))
 //     })
 // })
 
@@ -57,19 +57,30 @@ app.get('/', function(req, res) {
     })
 })
 
-app.get('/:id', function(req, res) {
+app.get('/:id', function(req, res, next) {
     var cursor = db.collection('quotes').find().toArray(function(err, data) {
-      var index = req.params.id-1
-      res.render(req.params.id + '.ejs', {quotes: data})
+        var quoteIndex = req.params.id-1
+        res.render(req.params.id + '.ejs', {
+            quotes: data
+        })
     })
 })
+
+// app.get('/:id', function(req, res, next) {
+//     var cursor = db.collection('quotes').find().toArray(function(err, data) {
+//         var quoteIndex = req.params.id-1
+//         console.log()
+//         res.render('quote', {
+//         res.send('singleQuote', {singelQuote:quotes[quoteIndex].quote})
+//     })
+// })
 
 app.get('/admin', function(req, res) {
     res.render('admin')
 })
 
 app.post('/quotes', function(req, res) {
-    db.collection('quotes').save(req.body, function (err, results) {
+    db.collection('quotes').save(req.body, function (err, data) {
         if (err) return console.log(err)
         console.log('saved to database')
         res.redirect('/quotes')
