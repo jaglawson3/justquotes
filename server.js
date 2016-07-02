@@ -3,6 +3,7 @@ var bodyParser= require('body-parser')
 var app = express()
 var MongoClient = require('mongodb').MongoClient
 var dotenv = require('dotenv').config({path:".env"});
+var url = require('url');
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.set('view engine', 'ejs')
@@ -39,23 +40,12 @@ app.get('/', function(req, res) {
     })
 })
 
-app.get('/:id', function(req, res, next) {
-    var cursor = db.collection('quotes').find().toArray(function(err, data) {
-        var quoteIndex = req.params.id-1
-        res.render(req.params.id + '.ejs', {
-            quotes: data
-        })
-    })
+app.get('/:id', function(req, res) {
+  var cursor = db.collection('quotes').find().toArray(function(err, data) {
+        console.log(data)
+        res.render('quote', {quotes:data[req.params.id], author:data[req.params.id].name})
+  })
 })
-
-// app.get('/:id', function(req, res, next) {
-//     var cursor = db.collection('quotes').find().toArray(function(err, data) {
-//         var quoteIndex = req.params.id-1
-//         console.log()
-//         res.render('quote', {
-//         res.send('singleQuote', {singelQuote:quotes[quoteIndex].quote})
-//     })
-// })
 
 app.get('/admin', function(req, res) {
     res.render('admin')
