@@ -40,16 +40,24 @@ app.get('/', function(req, res) {
     })
 })
 
-app.get('/:id', function(req, res) {
-  var cursor = db.collection('quotes').find().toArray(function(err, data) {
-        console.log(data)
-        res.render('quote', {quotes:data[req.params.id], author:data[req.params.id].name})
-  })
-})
-
 app.get('/admin', function(req, res) {
     res.render('admin')
 })
+
+app.get('/quotes', function(req, res) {
+    var cursor = db.collection('quotes').find().toArray(function(err, data) {
+        res.render('quotes',{quotes: data})
+    })
+})
+
+app.get('/:id', function(req, res) {
+  var cursor = db.collection('quotes').find().toArray(function(err, data) {
+        console.log(data)
+        res.render('quote', {quotes:data[req.params.id]})
+  })
+})
+
+
 
 app.post('/quotes', function(req, res) {
     db.collection('quotes').save(req.body, function (err, data) {
