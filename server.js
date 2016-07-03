@@ -40,7 +40,7 @@ app.get('/', function(req, res) {
     })
 })
 
-app.get('/admin', function(req, res) {
+app.get('/add', function(req, res) {
     res.render('admin')
 })
 
@@ -56,8 +56,6 @@ app.get('/:id', function(req, res) {
         res.render('quote', {quotes:data[req.params.id]})
   })
 })
-
-
 
 app.post('/quotes', function(req, res) {
     db.collection('quotes').save(req.body, function (err, data) {

@@ -257,6 +257,24 @@ p.subTitle , .quotes {
   text-align: center;
 }
 
+.heading {
+  padding: 2vw;
+  padding-left: 15vw;
+  color: #c4c4c4;
+  font-size: 4vw;
+  width: 50vw;
+  text-decoration: overline;
+}
+
+.heading2 {
+  text-align: center;
+  padding-right: 20vw;
+  color: #c4c4c4;
+  font-size: 4vw;
+  width: 100vw;
+  text-decoration: overline;
+}
+
 /* Portrait and Landscape */
 @media only screen
   and (min-device-width: 375px)
