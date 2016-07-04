@@ -32,7 +32,7 @@ body {
   width: 80vw;
   text-rendering: optimizeLegibility;
   -webkit-animation-name: light;
-  -webkit-animation-duration: 12s;
+  -webkit-animation-duration: 8s;
   -webkit-animation-iteration-count: infinite;
   }
 

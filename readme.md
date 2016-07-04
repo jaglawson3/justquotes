@@ -20,7 +20,7 @@ In using MongoDB, each new record is accorded a uid. The problem here is that wh
 
 I tried to create a simple UI that made the quotes the primary focal point of the application. A monochromatic color palette was utilized along with a subtle branding strategy around the phrase "Just Quotes" with ink blots, interactivity and animations. Given more time I would have liked to beef up the UI to be more aesthetically appealing to have a tighter layout. I also would have liked to make the components more modular. I initially included navigation buttons to simplify the experience of using this application, but realized this was not what the challenge was asking for. While the UI is sufficient, it still could be significantly improved upon in my mind, thus it is a shortcoming.
 
-To run this, simply use npm install in the console to get the dependencies installed and then run "nodemon server.js" to start it locally. You can also visit the deployed app.
+To run this, simply use npm install in the console to get the dependencies installed and then run "nodemon server.js" to start it locally. Then go to port 3000 on local host and view it. You can also find the project deployed live at [https://justquotes.herokuapp.com/]()
 
 ## Routes
 
@@ -29,10 +29,9 @@ To run this, simply use npm install in the console to get the dependencies insta
 /quotes - will display all quotes currently in the database
 / - will take you to the default view which presents the first quote in the database
 
-You can also find the project deployed live at [https://justquotes.herokuapp.com/]()
 
 Thanks for your time and consideration.
 
 Sincerely,
 
-Justin
+Justin Lawson
